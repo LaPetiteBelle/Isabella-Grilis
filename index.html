@@ -556,6 +556,7 @@
       <div class="agency-card" onclick="showAgency('pma')"><div class="agency-info"><span class="agency-city" data-i18n="Hamburg_Germany">Hamburg, Germany</span><span class="agency-name">PMA Models</span></div><span class="agency-arrow">→</span></div>
       <div class="agency-card" onclick="showAgency('le-dk')"><div class="agency-info"><span class="agency-city" data-i18n="Aarhus_Denmark">Aarhus, Denmark</span><span class="agency-name">Le Management</span></div><span class="agency-arrow">→</span></div>
       <div class="agency-card" onclick="showAgency('le-se')"><div class="agency-info"><span class="agency-city" data-i18n="Stockholm_Sweden">Stockholm, Sweden</span><span class="agency-name">Le Management</span></div><span class="agency-arrow">→</span></div>
+      <div class="agency-card" onclick="showAgency('third')"><div class="agency-info"><span class="agency-city" data-i18n="Oslo_Norway">Oslo, Norway</span><span class="agency-name">3RD Management</span></div><span class="agency-arrow">→</span></div>
       <div class="agency-card" onclick="showAgency('perfect')"><div class="agency-info"><span class="agency-city" data-i18n="Lille_France">Lille, France</span><span class="agency-name">Perfect Model Management</span></div><span class="agency-arrow">→</span></div>
     </div>
 
@@ -613,6 +614,7 @@
       aeon:      { name:'AEON Models', city:'Paris, France', website:'https://www.aeonmodels.com', portfolio:'https://www.aeonmodels.com/main/343-isabella/', compCard:'https://www.aeonmodels.com/main/343-isabella/', bookers:[{name:'AEON Models', title:'Bookings', email:'info@aeonmodels.com'}] },
       perfect:   { name:'Perfect Model Management', city:'Lille, France', website:'http://perfectmodels.fr', portfolio:'http://perfectmodels.fr/women/main-board/2844-isabella-grilis/', compCard:'http://perfectmodels.fr/women/main-board/2844-isabella-grilis/', bookers:[], contactPage:'http://perfectmodels.fr/contact/' },
       'le-se':   { name:'Le Management', city:'Stockholm, Sweden', website:'https://lemanagement.se', portfolio:'https://lemanagement.se/model/isabella-grilis/', compCard:'https://lemanagement.se/model/isabella-grilis/', bookers:[{name:'Cidem Erdal', title:'Head Booker', email:'cidem@lemanagement.se'}] },
+      'third':   { name:'3RD Management', city:'Oslo, Norway', website:'https://3rd.management', portfolio:'https://3rd.management/models/isabella-grilis/', compCard:'https://3rd.management/models/isabella-grilis/', bookers:[{name:'Tarek Mid', title:'Co-Founder & Head of Models', email:'tarek@3rd.management'}] },
       'le-dk':   { name:'Le Management', city:'Aarhus, Denmark', website:'https://lemanagement.dk', portfolio:'https://lemanagement.dk/model/isabella-grilis/', compCard:'https://lemanagement.dk/model/isabella-grilis/', bookers:[{name:'Rasmus Nortvig', title:'Booker', email:'rnortvig@lemanagement.dk'}] },
       'collab':  { name:'Brand Collaborations', city:'Social Media & Brand Partnerships', website:'https://www.euromodel.nl', portfolio:'https://www.euromodel.nl/models/201-isabella-grilis', bookers:[{name:'Lisa van Beurden', title:'Booker & Brand Collaborations', email:'Lisa@euromodel.nl'}], isCollab: true }
     };
@@ -654,8 +656,8 @@
     }
     const measData = {
       eu: { height:'177 cm', dress:'36', bust:'84 cm', waist:'60 cm', hips:'92 cm', shoes:'38' },
-      uk: { height:"5'9½\"", dress:'6', bust:'34"', waist:'24½"', hips:'36½"', shoes:'5' },
-      us: { height:"5'10\"", dress:'4', bust:'34"', waist:'23½"', hips:'36"', shoes:'8' }
+      uk: { height:"5'10\"", dress:'8', bust:'33"', waist:'23½"', hips:'36"', shoes:'5' },
+      us: { height:"5'10\"", dress:'4', bust:'33"', waist:'23½"', hips:'36"', shoes:'7.5' }
     };
     function setUnit(unit) {
       const d = measData[unit];
@@ -691,6 +693,7 @@
         Milan_Italy:'Milan, Italy', London_United_Kingdom:'London, United Kingdom',
         Barcelona_Spain:'Barcelona, Spain', Hamburg_Germany:'Hamburg, Germany',
         Paris_France:'Paris, France', Lille_France:'Lille, France',
+        Oslo_Norway:'Oslo, Norway',
         Stockholm_Sweden:'Stockholm, Sweden', Aarhus_Denmark:'Aarhus, Denmark',
         Social_Media_and_Brand_Partnerships:'Social Media & Brand Partnerships',
       },
@@ -707,6 +710,7 @@
         Milan_Italy:'Milán, Italia', London_United_Kingdom:'Londres, Reino Unido',
         Barcelona_Spain:'Barcelona, España', Hamburg_Germany:'Hamburgo, Alemania',
         Paris_France:'París, Francia', Lille_France:'Lille, Francia',
+        Oslo_Norway:'Oslo, Noruega',
         Stockholm_Sweden:'Estocolmo, Suecia', Aarhus_Denmark:'Aarhus, Dinamarca',
         Social_Media_and_Brand_Partnerships:'Redes sociales & Colaboraciones de marca',
       },
@@ -723,6 +727,7 @@
         Milan_Italy:'Milan, Italie', London_United_Kingdom:'Londres, Royaume-Uni',
         Barcelona_Spain:'Barcelone, Espagne', Hamburg_Germany:'Hambourg, Allemagne',
         Paris_France:'Paris, France', Lille_France:'Lille, France',
+        Oslo_Norway:'Oslo, Norvège',
         Stockholm_Sweden:'Stockholm, Suède', Aarhus_Denmark:'Aarhus, Danemark',
         Social_Media_and_Brand_Partnerships:'Réseaux sociaux & Collaborations de marque',
       }

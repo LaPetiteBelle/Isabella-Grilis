@@ -38,27 +38,17 @@
     html {
       background: #FAE8E4 !important;
       overflow-x: hidden;
-      height: -webkit-fill-available;
     }
     body {
-      background: #FAE8E4;
-      color: var(--terra-dark);
-      font-family: 'Cormorant Garamond', serif;
-      min-height: 100vh;
-      min-height: -webkit-fill-available;
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      position: relative;
-    }
-    body::after {
-      content: '';
-      position: fixed;
-      inset: -100px;
-      background: #FAE8E4;
+      background-color: #FAE8E4;
       background-image:
         radial-gradient(ellipse at 15% 0%, #F5D5CE 0%, transparent 50%),
         radial-gradient(ellipse at 85% 90%, #EDCDC6 0%, transparent 50%);
-      z-index: -1;
+      color: var(--terra-dark);
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
     }
     .page { display: none; flex-direction: column; align-items: center; padding: 0 1.5rem 5rem; min-height: 100vh; }
     .page.active { display: flex; }
@@ -474,8 +464,8 @@
 
   <!-- ═══ HOME PAGE ═══ -->
   <!-- Fixed pink bars for iOS Safari top/bottom -->
-  <div style="position:fixed;top:0;left:0;right:0;height:60px;background:#FAE8E4;z-index:0;"></div>
-  <div style="position:fixed;bottom:0;left:0;right:0;height:60px;background:#FAE8E4;z-index:0;"></div>
+  <div style="position:fixed;top:0;left:0;right:0;height:120px;background:#FAE8E4;z-index:0;"></div>
+  <div style="position:fixed;bottom:0;left:0;right:0;height:120px;background:#FAE8E4;z-index:0;"></div>
 
   <!-- Language toggle -->
   <div class="lang-toggle" id="langToggle">

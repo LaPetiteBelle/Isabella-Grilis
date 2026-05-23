@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FAE8E4" />
+  <meta name="theme-color" content="#FAE8E4" media="(prefers-color-scheme: light)" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <title>Isabella Grilis — International Model</title>
@@ -35,7 +36,8 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html, body { background-color: #FAE8E4 !important; }
-    html { overflow-x: hidden; }
+    html { overflow-x: hidden; background-color: #FAE8E4 !important; }
+    body { padding-bottom: env(safe-area-inset-bottom); padding-top: env(safe-area-inset-top); }
 
     body {
       background-color: #FAE8E4;
@@ -796,6 +798,17 @@
     }
     function carouselNext() { carouselGo((carouselIndex + 1) % carouselTotal); }
     function carouselPrev() { carouselGo((carouselIndex - 1 + carouselTotal) % carouselTotal); }
+
+    // Auto-rotate every 5 seconds
+    let autoRotate = setInterval(carouselNext, 5000);
+    const carouselWrapEl = document.querySelector('.carousel-wrap');
+    if (carouselWrapEl) {
+      carouselWrapEl.addEventListener('touchstart', () => clearInterval(autoRotate), { passive: true });
+      carouselWrapEl.addEventListener('click', () => {
+        clearInterval(autoRotate);
+        autoRotate = setInterval(carouselNext, 5000);
+      });
+    }
 
     // Click zones left/right + swipe
     const wrap = document.querySelector('.carousel-wrap');

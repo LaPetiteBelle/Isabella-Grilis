@@ -35,8 +35,24 @@
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { background-color: #FAE8E4 !important; overflow-x: hidden; height: 100%; }
-    body { background-color: #FAE8E4 !important; overflow-x: hidden; min-height: 100%; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+    html {
+      background: #FAE8E4 !important;
+      overflow-x: hidden;
+      height: -webkit-fill-available;
+    }
+    body {
+      background-color: #FAE8E4 !important;
+      overflow-x: hidden;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #FAE8E4;
+      z-index: -1;
+    }
 
     body {
       background-color: #FAE8E4;
